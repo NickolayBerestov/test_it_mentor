@@ -9,6 +9,7 @@ public class Calc {
         if (str.length() != 5) {
             throw new IOException();
         }
+
         int result = 0;
         String numbers[];
         if (str.indexOf("+") > 0) {
@@ -23,8 +24,6 @@ public class Calc {
         } else if (str.indexOf("/") > 0) {
             numbers = str.split("\s\\/\s");
             result = Integer.parseInt(numbers[0]) / Integer.parseInt(numbers[1]);
-        } else {
-
         }
         System.out.println(result);
     }
