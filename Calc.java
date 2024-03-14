@@ -6,7 +6,9 @@ public class Calc {
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
-
+        if (str.length() != 5) {
+            throw new IOException();
+        }
         int result = 0;
         String numbers[];
         if (str.indexOf("+") > 0) {
